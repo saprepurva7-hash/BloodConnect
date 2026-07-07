@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Donor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🩸 BloodConnect</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/search">Search</a></li>
+        <li><a href="/donors">Donors</a></li>
+    </ul>
+</nav>
+
+<div class="form-container">
+
+<h1>Blood Donor Registration</h1>
+
+<form method="POST">
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Age</label>
+<input type="number" name="age" required>
+
+<label>Blood Group</label>
+<select name="blood_group">
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+</select>
+
+<label>City</label>
+<input type="text" name="city" required>
+
+<label>Phone Number</label>
+<input type="text" name="phone" required>
+
+<button type="submit">Register</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
