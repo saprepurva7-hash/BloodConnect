@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Search Donor</title>
+
+</head>
+
+<body>
+
+<h1>Search Blood Donor</h1>
+
+<form method="POST">
+
+<select name="blood_group">
+
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+
+</select>
+
+<button type="submit">Search</button>
+
+</form>
+
+<hr>
+
+<h2>Available Donors</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+<th>Name</th>
+<th>Age</th>
+<th>Blood Group</th>
+<th>City</th>
+<th>Phone</th>
+
+</tr>
+
+{% for donor in donors %}
+
+<tr>
+
+<td>{{ donor["name"] }}</td>
+<td>{{ donor["age"] }}</td>
+<td>{{ donor["blood_group"] }}</td>
+<td>{{ donor["city"] }}</td>
+<td>{{ donor["phone"] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

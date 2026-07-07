@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emergency Blood Request</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🩸 BloodConnect</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/search">Search</a></li>
+        <li><a href="/donors">Donors</a></li>
+        <li><a href="/emergency">Emergency</a></li>
+    </ul>
+</nav>
+
+<div class="form-container">
+
+    <h1>🚨 Emergency Blood Request</h1>
+
+    <form method="POST">
+
+        <label>Patient Name</label>
+        <input type="text" name="patient_name" placeholder="Enter Patient Name" required>
+
+        <label>Blood Group Required</label>
+        <select name="blood_group" required>
+            <option value="">Select Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+        </select>
+
+        <label>Hospital Name</label>
+        <input type="text" name="hospital" placeholder="Enter Hospital Name" required>
+
+        <label>City</label>
+        <input type="text" name="city" placeholder="Enter City" required>
+
+        <label>Contact Number</label>
+        <input type="text" name="phone" placeholder="Enter Contact Number" required>
+
+        <label>Urgency Level</label>
+        <select name="urgency" required>
+            <option value="">Select Urgency</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+        </select>
+
+        <button type="submit">Submit Request</button>
+
+    </form>
+
+    <hr style="margin:40px 0;">
+
+    <h2 style="text-align:center; color:#b30000;">Emergency Helpline</h2>
+
+    <p style="text-align:center; line-height:30px;">
+        📞 +91 9876543210 <br>
+        📧 bloodconnect@gmail.com <br>
+        🕒 24 × 7 Emergency Support
+    </p>
+
+</div>
+
+</body>
+</html>
